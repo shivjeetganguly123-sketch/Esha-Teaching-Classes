@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esha Ganguly Home Tuitions — Nursery to Class 7 | Hinjewadi Phase 3, Pune</title>
+<meta name="description" content="Home tuition by Esha Ganguly for Nursery to Class 7. All subjects — English, Hindi, Maths, Science, History, Geography. 3 PM – 8 PM. Hinjewadi Phase 3, near TCS Circle, Pune. Call 7992303328.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1d3461;          /* fountain-pen blue */
+    --ink-soft:#3e5c96;
+    --paper:#fdfcf7;        /* notebook paper */
+    --rule:#dfe7f2;         /* ruled line blue */
+    --margin-red:#e4572e;   /* the red margin line */
+    --marigold:#f7b32b;     /* crayon yellow */
+    --leaf:#2a9d8f;
+    --shadow:0 14px 34px rgba(29,52,97,.14);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Nunito',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    /* ruled notebook lines */
+    background-image:
+      linear-gradient(transparent 31px, var(--rule) 31px, var(--rule) 32px, transparent 32px);
+    background-size:100% 32px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Baloo 2',cursive;line-height:1.15;color:var(--ink)}
+
+  /* ---------- top strip ---------- */
+  .topbar{
+    background:var(--ink);color:#fff;
+    font-size:.85rem;padding:.45rem 1.25rem;
+    display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;text-align:center;
+  }
+  .topbar a{color:var(--marigold);text-decoration:none;font-weight:800}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(253,252,247,.92);backdrop-filter:blur(8px);
+    border-bottom:2px solid var(--rule);
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.7rem clamp(1rem,5vw,4rem);
+  }
+  .brand{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.25rem;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:.5rem}
+  .brand .dot{width:14px;height:14px;border-radius:4px;background:var(--marigold);display:inline-block;transform:rotate(12deg)}
+  .nav-links{display:flex;gap:1.4rem;align-items:center}
+  .nav-links a{color:var(--ink-soft);text-decoration:none;font-weight:700;font-size:.95rem}
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--margin-red)}
+  .nav-cta{background:var(--margin-red);color:#fff !important;padding:.45rem 1rem;border-radius:999px}
+  .nav-cta:hover{background:#c94a26}
+  .menu-btn{
+    display:none;background:#fff;border:2px solid var(--ink);border-radius:10px;
+    font-size:1.2rem;padding:.3rem .7rem;cursor:pointer;color:var(--ink);font-weight:800;
+  }
+  @media(max-width:640px){
+    .menu-btn{display:inline-flex;align-items:center;gap:.4rem}
+    .nav-links{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;align-items:stretch;gap:0;
+      background:#fff;border-bottom:2px solid var(--rule);
+      box-shadow:0 14px 30px rgba(29,52,97,.15);
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{padding:.95rem 1.4rem;border-bottom:1.5px solid var(--rule);font-size:1.05rem}
+    .nav-links a:last-child{border-bottom:none}
+    .nav-cta{border-radius:0;text-align:center}
+  }
+  section, .contact{scroll-margin-top:80px}
+
+  a:focus-visible,button:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:6px}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:center;
+    padding:clamp(2.5rem,7vw,5rem) clamp(1rem,5vw,4rem);
+    min-height:78vh;
+    /* red margin line like a notebook */
+    border-left:3px solid transparent;
+  }
+  .hero::before{
+    content:"";position:absolute;top:0;bottom:0;left:clamp(1.4rem,4vw,3.2rem);
+    width:2px;background:var(--margin-red);opacity:.55;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:#fff;border:2px solid var(--rule);border-radius:999px;
+    padding:.35rem .9rem;font-weight:800;font-size:.85rem;color:var(--ink-soft);
+    box-shadow:var(--shadow);
+  }
+  .eyebrow .badge{background:var(--leaf);color:#fff;border-radius:999px;padding:.05rem .6rem;font-size:.75rem}
+  .hero h1{font-size:clamp(2.3rem,5.5vw,3.9rem);margin:1rem 0 .4rem;font-weight:800}
+  .hero h1 .underline{position:relative;white-space:nowrap}
+  .hero h1 .underline::after{
+    content:"";position:absolute;left:0;right:0;bottom:6px;height:.38em;
+    background:var(--marigold);z-index:-1;border-radius:4px;transform:rotate(-1deg);
+  }
+  .hero .sub{font-size:1.12rem;color:#44537a;max-width:34rem;margin-bottom:1.6rem}
+  .cta-row{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:1.6rem}
+  .btn{font-family:'Nunito';font-weight:800;font-size:1rem;text-decoration:none;border-radius:999px;padding:.85rem 1.6rem;display:inline-flex;align-items:center;gap:.55rem;transition:transform .15s ease, box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-call{background:var(--margin-red);color:#fff;box-shadow:0 10px 22px rgba(228,87,46,.35)}
+  .btn-wa{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+  .hero-facts{display:flex;gap:1.6rem;flex-wrap:wrap;font-size:.92rem;color:var(--ink-soft);font-weight:700}
+  .hero-facts span b{color:var(--ink);font-size:1.05rem;display:block}
+
+  .stage-wrap{position:relative;min-height:420px}
+  #stage{width:100%;height:100%;min-height:420px;display:block;cursor:grab}
+  .stage-hint{
+    position:absolute;bottom:8px;left:50%;transform:translateX(-50%);
+    font-size:.75rem;color:var(--ink-soft);background:#fff;border:1.5px solid var(--rule);
+    border-radius:999px;padding:.2rem .8rem;font-weight:700;white-space:nowrap;
+  }
+  @media(max-width:880px){
+    .hero{grid-template-columns:1fr;min-height:unset}
+    .stage-wrap{min-height:300px;order:-1}
+    #stage{min-height:300px}
+  }
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(2.5rem,6vw,4.5rem) clamp(1rem,5vw,4rem)}
+  .sec-head{max-width:42rem;margin-bottom:2.2rem}
+  .sec-head .tag{font-weight:800;color:var(--margin-red);letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-top:.3rem}
+  .sec-head p{color:#44537a;margin-top:.5rem}
+
+  /* subjects */
+  .subjects{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem}
+  .subject{
+    background:#fff;border:2px solid var(--rule);border-radius:var(--radius);
+    padding:1.3rem 1.2rem;box-shadow:var(--shadow);
+    transition:transform .18s ease;
+  }
+  .subject:hover{transform:translateY(-5px) rotate(-.5deg)}
+  .subject .icon{
+    width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-size:1.4rem;margin-bottom:.8rem;
+  }
+  .subject h3{font-size:1.15rem;margin-bottom:.2rem}
+  .subject p{font-size:.9rem;color:#5a6a90}
+  .c1{background:#fde8c9}.c2{background:#ffe1d6}.c3{background:#d7f0ec}.c4{background:#dde7f8}.c5{background:#f3e2f5}.c6{background:#e6f3d8}
+
+  /* classes ladder */
+  .ladder{display:flex;gap:.7rem;flex-wrap:wrap}
+  .rung{
+    font-family:'Baloo 2';font-weight:700;
+    background:#fff;border:2px solid var(--ink);border-radius:12px;
+    padding:.55rem 1.1rem;font-size:1rem;
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  .rung.hl{background:var(--marigold);}
+
+  /* info cards */
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+  .info-card{background:#fff;border:2px solid var(--rule);border-radius:var(--radius);padding:1.6rem;box-shadow:var(--shadow)}
+  .info-card h3{display:flex;align-items:center;gap:.6rem;font-size:1.2rem;margin-bottom:.7rem}
+  .info-card p{color:#44537a;font-size:.97rem}
+  .info-card .big{font-family:'Baloo 2';font-size:1.5rem;color:var(--ink);font-weight:800}
+  .pill{display:inline-block;background:#fde8c9;border-radius:999px;padding:.15rem .7rem;font-weight:800;font-size:.8rem;color:#9a5b00;margin-top:.6rem}
+
+  /* enquiry form */
+  .enquiry-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:2rem;align-items:start}
+  @media(max-width:880px){.enquiry-wrap{grid-template-columns:1fr}}
+  .form-card{
+    background:#fff;border:2px solid var(--rule);border-radius:var(--radius);
+    padding:1.8rem;box-shadow:var(--shadow);
+  }
+  .field{margin-bottom:1.1rem}
+  .field label{display:block;font-weight:800;font-size:.92rem;margin-bottom:.35rem;color:var(--ink)}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:'Nunito';font-size:1rem;color:var(--ink);
+    background:var(--paper);border:2px solid var(--rule);border-radius:12px;
+    padding:.7rem .9rem;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--marigold)}
+  .field .err{display:none;color:var(--margin-red);font-size:.82rem;font-weight:700;margin-top:.25rem}
+  .field.invalid input,.field.invalid select{border-color:var(--margin-red)}
+  .field.invalid .err{display:block}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  @media(max-width:520px){.form-row{grid-template-columns:1fr}}
+  .form-note{font-size:.85rem;color:#5a6a90;margin-top:.8rem}
+  .submit-btn{
+    width:100%;border:none;cursor:pointer;justify-content:center;
+  }
+
+  /* contact */
+  .contact{
+    background:var(--ink);color:#fff;border-radius:28px;
+    margin:0 clamp(1rem,5vw,4rem) 3rem;
+    padding:clamp(2rem,5vw,3.5rem);
+    display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;
+    background-image:linear-gradient(transparent 31px, rgba(255,255,255,.06) 31px, rgba(255,255,255,.06) 32px, transparent 32px);
+    background-size:100% 32px;
+  }
+  .contact h2{color:#fff;font-size:clamp(1.7rem,3.5vw,2.4rem)}
+  .contact p{color:#c9d5ee;margin:.6rem 0 1.4rem}
+  .contact .addr{background:rgba(255,255,255,.08);border:1.5px dashed rgba(255,255,255,.35);border-radius:16px;padding:1.2rem 1.4rem;font-size:.97rem;line-height:1.7}
+  .contact .addr b{color:var(--marigold)}
+  @media(max-width:880px){.contact{grid-template-columns:1fr}}
+
+  footer{text-align:center;padding:1.4rem;font-size:.85rem;color:var(--ink-soft)}
+
+  /* gentle entrance */
+  .rise{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .rise.show{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .rise{opacity:1;transform:none;transition:none}
+    .subject:hover,.btn:hover{transform:none}
+  }
+
+  /* ===================== chat helper widget ===================== */
+  .cb-launch{
+    position:fixed; right:clamp(1rem,4vw,1.6rem); bottom:clamp(1rem,4vw,1.6rem);
+    z-index:999; display:inline-flex; align-items:center; gap:.55rem;
+    font-family:'Baloo 2',cursive; font-weight:800; font-size:1rem; color:var(--ink);
+    background:var(--marigold); border:2px solid var(--ink); border-radius:999px;
+    padding:.7rem 1.15rem; cursor:pointer; box-shadow:4px 4px 0 var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .cb-launch:hover{transform:translateY(-2px); box-shadow:5px 7px 0 var(--ink)}
+  .cb-launch .cb-dot{width:14px;height:14px;border-radius:4px;background:var(--ink);display:inline-block;transform:rotate(12deg)}
+  .cb-launch.cb-hide{display:none}
+  @keyframes cb-wiggle{0%,90%,100%{transform:rotate(0)}93%{transform:rotate(-6deg)}96%{transform:rotate(6deg)}98%{transform:rotate(-3deg)}}
+  .cb-launch.cb-attn{animation:cb-wiggle 2.6s ease-in-out 1}
+
+  .cb-panel{
+    position:fixed; right:clamp(1rem,4vw,1.6rem); bottom:calc(clamp(1rem,4vw,1.6rem) + 3.4rem);
+    z-index:1000; width:min(372px, calc(100vw - 2rem)); max-height:min(72vh, 640px);
+    display:none; flex-direction:column; overflow:hidden;
+    background:var(--paper); border:2px solid var(--ink); border-radius:22px;
+    box-shadow:0 22px 50px rgba(29,52,97,.30);
+  }
+  .cb-panel.cb-open{display:flex; animation:cb-pop .18s ease}
+  @keyframes cb-pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+
+  .cb-head{background:var(--ink); color:#fff; padding:.85rem 1rem; display:flex; align-items:center; gap:.6rem}
+  .cb-head .cb-ava{width:34px;height:34px;border-radius:10px;background:var(--marigold);color:var(--ink);
+    font-family:'Baloo 2';font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex:0 0 auto}
+  .cb-head .cb-meta{line-height:1.2;min-width:0}
+  .cb-head .cb-meta b{font-family:'Baloo 2';font-size:1.02rem;font-weight:800;display:block}
+  .cb-head .cb-meta small{color:#c9d5ee;font-size:.78rem}
+  .cb-x{margin-left:auto;background:rgba(255,255,255,.12);color:#fff;border:none;cursor:pointer;
+    width:30px;height:30px;border-radius:9px;font-size:1rem;font-weight:800;line-height:1;flex:0 0 auto}
+  .cb-x:hover{background:rgba(255,255,255,.24)}
+
+  .cb-body{
+    position:relative; flex:1; overflow-y:auto; padding:1rem .9rem 1rem 1.15rem;
+    background-image:linear-gradient(transparent 27px, var(--rule) 27px, var(--rule) 28px, transparent 28px);
+    background-size:100% 28px;
+  }
+  .cb-body::before{content:"";position:absolute;top:0;bottom:0;left:.55rem;width:2px;background:var(--margin-red);opacity:.5}
+
+  .cb-msg{display:flex;gap:.5rem;margin:.55rem 0;align-items:flex-end}
+  .cb-msg .cb-mava{width:26px;height:26px;border-radius:8px;background:var(--marigold);flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;font-size:.9rem;transform:rotate(-4deg)}
+  .cb-bubble{max-width:80%; padding:.6rem .8rem; border-radius:14px; font-size:.93rem; line-height:1.5;
+    background:#fff; color:var(--ink); border:2px solid var(--rule); box-shadow:0 4px 12px rgba(29,52,97,.08); word-wrap:break-word; overflow-wrap:anywhere}
+  .cb-bubble a{color:var(--margin-red);font-weight:800;text-decoration:none}
+  .cb-bubble a:hover{text-decoration:underline}
+  .cb-msg.cb-me{flex-direction:row-reverse}
+  .cb-msg.cb-me .cb-bubble{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  .cb-acts{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.6rem}
+  .cb-act{font-family:'Nunito';font-weight:800;font-size:.83rem;cursor:pointer;text-decoration:none;
+    background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:.34rem .7rem;
+    display:inline-flex;align-items:center;gap:.3rem;transition:background .14s ease,color .14s ease}
+  .cb-act:hover{background:var(--marigold);text-decoration:none}
+  .cb-act.cb-go{background:var(--margin-red);color:#fff;border-color:var(--margin-red)}
+  .cb-act.cb-go:hover{background:#c94a26}
+
+  .cb-chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:.55rem .9rem;border-top:2px solid var(--rule);background:var(--paper)}
+  .cb-chip{font-family:'Nunito';font-weight:700;font-size:.82rem;cursor:pointer;
+    background:#fff;color:var(--ink-soft);border:1.5px solid var(--rule);border-radius:999px;padding:.3rem .7rem}
+  .cb-chip:hover{border-color:var(--marigold);color:var(--ink)}
+
+  .cb-input{display:flex;gap:.5rem;padding:.7rem .9rem;border-top:2px solid var(--rule);background:#fff}
+  .cb-input input{flex:1;font-family:'Nunito';font-size:.95rem;color:var(--ink);
+    background:var(--paper);border:2px solid var(--rule);border-radius:12px;padding:.6rem .8rem}
+  .cb-input input:focus{outline:none;border-color:var(--marigold)}
+  .cb-send{background:var(--margin-red);color:#fff;border:none;cursor:pointer;border-radius:12px;
+    padding:0 .95rem;font-size:1.05rem;font-weight:800;flex:0 0 auto}
+  .cb-send:hover{background:#c94a26}
+
+  .cb-typing{display:inline-flex;gap:.25rem;padding:.15rem 0}
+  .cb-typing i{width:7px;height:7px;border-radius:50%;background:var(--ink-soft);display:inline-block;animation:cb-bl 1s infinite}
+  .cb-typing i:nth-child(2){animation-delay:.15s}
+  .cb-typing i:nth-child(3){animation-delay:.3s}
+  @keyframes cb-bl{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+
+  @media(max-width:520px){
+    .cb-panel{right:.6rem;left:.6rem;width:auto;bottom:4.6rem;max-height:76vh}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cb-launch.cb-attn{animation:none}
+    .cb-panel.cb-open{animation:none}
+    .cb-typing i{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>📞 Admissions open for the new session — call <a href="tel:+917992303328">79923 03328</a></span>
+</div>
+
+<nav>
+  <a class="brand" href="#top"><span class="dot"></span>Esha Ganguly Tuitions</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰ Menu</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#subjects">Subjects</a>
+    <a href="#classes">Classes</a>
+    <a href="#timings">Timings</a>
+    <a href="#enquiry">Enquiry</a>
+    <a href="#contact">Address</a>
+    <a class="nav-cta" href="tel:+917992303328">Call now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-text rise">
+    <span class="eyebrow"><span class="badge">Open</span> Home tuition · Hinjewadi Phase 3, Pune</span>
+    <h1>Learning feels easy with <span class="underline">Esha Ma'am</span></h1>
+    <p class="sub">Personal, caring home tuition for <b>Nursery to Class 7</b> — all subjects under one roof, with small batches and homework help every day.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+917992303328">📞 Call 79923 03328</a>
+      <a class="btn btn-wa" href="https://wa.me/917992303328?text=Hello%20Esha%20Ma%27am%2C%20I%20want%20to%20enquire%20about%20tuition%20for%20my%20child." target="_blank" rel="noopener">💬 WhatsApp enquiry</a>
+    </div>
+    <div class="hero-facts">
+      <span><b>Nursery – 7th</b>All classes</span>
+      <span><b>6 subjects</b>Eng · Hindi · Maths & more</span>
+      <span><b>3 PM – 8 PM</b>Mon to Sat</span>
+    </div>
+  </div>
+  <div class="stage-wrap rise">
+    <canvas id="stage" aria-label="Floating 3D school books, pencil and ABC blocks animation" role="img"></canvas>
+    <span class="stage-hint">✦ drag to spin the classroom ✦</span>
+  </div>
+</header>
+
+<section id="subjects">
+  <div class="sec-head rise">
+    <span class="tag">What we teach</span>
+    <h2>All subjects, one teacher who knows your child</h2>
+    <p>From first alphabets to Class 7 exams — concepts explained simply, with regular revision and school-syllabus support.</p>
+  </div>
+  <div class="subjects">
+    <div class="subject rise"><div class="icon c1">📖</div><h3>English</h3><p>Reading, grammar, writing and confident speaking.</p></div>
+    <div class="subject rise"><div class="icon c2">🪔</div><h3>Hindi</h3><p>व्याकरण, lekhan and reading practice made simple.</p></div>
+    <div class="subject rise"><div class="icon c3">➗</div><h3>Maths</h3><p>Strong basics, tables, and step-by-step problem solving.</p></div>
+    <div class="subject rise"><div class="icon c4">🔬</div><h3>Science</h3><p>Concepts with everyday examples children remember.</p></div>
+    <div class="subject rise"><div class="icon c5">🏛️</div><h3>History</h3><p>Stories of the past told the interesting way.</p></div>
+    <div class="subject rise"><div class="icon c6">🗺️</div><h3>Geography</h3><p>Maps, places and our world, made fun to explore.</p></div>
+  </div>
+</section>
+
+<section id="classes" style="padding-top:0">
+  <div class="sec-head rise">
+    <span class="tag">Who can join</span>
+    <h2>Nursery to Class 7</h2>
+    <p>Every class gets age-appropriate attention — playful learning for the little ones, exam focus for seniors.</p>
+  </div>
+  <div class="ladder rise">
+    <span class="rung hl">Nursery</span><span class="rung hl">LKG</span><span class="rung hl">UKG</span>
+    <span class="rung">Class 1</span><span class="rung">Class 2</span><span class="rung">Class 3</span>
+    <span class="rung">Class 4</span><span class="rung">Class 5</span><span class="rung">Class 6</span><span class="rung">Class 7</span>
+  </div>
+</section>
+
+<section id="timings" style="padding-top:0">
+  <div class="info-grid">
+    <div class="info-card rise">
+      <h3>🕒 Tuition timings</h3>
+      <p class="big">3:00 PM – 8:00 PM</p>
+      <p>Afternoon and evening batches, after school hours.</p>
+      <span class="pill">Monday – Saturday</span>
+    </div>
+    <div class="info-card rise">
+      <h3>👩‍🏫 Why parents trust us</h3>
+      <p>Small batches, daily homework support, regular tests, and friendly updates to parents about progress.</p>
+      <span class="pill">Personal attention</span>
+    </div>
+    <div class="info-card rise">
+      <h3>📍 Easy to reach</h3>
+      <p>Right in Hinjewadi Phase 3 — near TCS Circle, opposite Public Bazar. Walkable for families in nearby societies.</p>
+      <span class="pill">Hinjewadi Phase 3</span>
+    </div>
+  </div>
+</section>
+
+<section id="enquiry" style="padding-top:0">
+  <div class="enquiry-wrap">
+    <div class="sec-head rise" style="margin-bottom:0">
+      <span class="tag">Admission enquiry</span>
+      <h2>Tell us about your child</h2>
+      <p>Fill this small form and it will open WhatsApp with your details ready to send — Esha Ma'am will reply with batch availability and fees.</p>
+      <p style="margin-top:1rem">Prefer to talk? Call <a href="tel:+917992303328" style="color:var(--margin-red);font-weight:800">79923 03328</a> between 3 PM and 8 PM.</p>
+    </div>
+    <div class="form-card rise">
+      <div class="field" id="f-name">
+        <label for="stuName">Name of student</label>
+        <input type="text" id="stuName" placeholder="e.g. Aarav Sharma" autocomplete="name">
+        <span class="err">Please enter the student's name</span>
+      </div>
+      <div class="form-row">
+        <div class="field" id="f-class">
+          <label for="stuClass">Class</label>
+          <select id="stuClass">
+            <option value="">Select class</option>
+            <option>Nursery</option><option>LKG</option><option>UKG</option>
+            <option>Class 1</option><option>Class 2</option><option>Class 3</option>
+            <option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option>
+          </select>
+          <span class="err">Please select a class</span>
+        </div>
+        <div class="field" id="f-time">
+          <label for="stuTime">Comfortable timing</label>
+          <select id="stuTime">
+            <option value="">Select timing</option>
+            <option>3:00 – 4:00 PM</option>
+            <option>4:00 – 5:00 PM</option>
+            <option>5:00 – 6:00 PM</option>
+            <option>6:00 – 7:00 PM</option>
+            <option>7:00 – 8:00 PM</option>
+            <option>Any time between 3 – 8 PM</option>
+          </select>
+          <span class="err">Please select a timing</span>
+        </div>
+      </div>
+      <div class="field" id="f-phone">
+        <label for="stuPhone">Phone number</label>
+        <input type="tel" id="stuPhone" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel">
+        <span class="err">Please enter a valid 10-digit phone number</span>
+      </div>
+      <div class="field" id="f-addr">
+        <label for="stuAddr">Address</label>
+        <textarea id="stuAddr" rows="2" placeholder="Society name / area, Hinjewadi"></textarea>
+        <span class="err">Please enter your address or society name</span>
+      </div>
+      <button class="btn btn-call submit-btn" id="sendEnquiry" type="button">💬 Send enquiry on WhatsApp</button>
+      <p class="form-note">This opens WhatsApp on your phone with the message pre-typed — just press send. No details are stored on this website.</p>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="contact">
+  <div class="rise">
+    <h2>Visit us or call today</h2>
+    <p>Seats in each batch are limited so every child gets attention. Call or WhatsApp to book a free first interaction.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+917992303328">📞 79923 03328</a>
+      <a class="btn" style="background:var(--marigold);color:var(--ink)" href="https://wa.me/917992303328" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </div>
+  <div class="addr rise">
+    <b>Esha Ganguly Home Tuitions</b><br>
+    C/o Shivjeet Ganguly, Flat No. 104,<br>
+    Livmo – Rama Group,<br>
+    Hinjewadi Phase 3, near TCS Circle,<br>
+    opposite Public Bazar,<br>
+    Pune, Maharashtra – 411057<br><br>
+    📞 <a href="tel:+917992303328" style="color:var(--marigold);font-weight:800">+91 79923 03328</a>
+  </div>
+</div>
+
+<footer>© 2026 Esha Ganguly Home Tuitions · Hinjewadi Phase 3, Pune</footer>
+
+<!-- ===== chat helper widget ===== -->
+<button class="cb-launch" id="cbLaunch" aria-label="Open chat helper" aria-expanded="false" aria-controls="cbPanel">
+  <span class="cb-dot"></span> Ask a doubt
+</button>
+
+<div class="cb-panel" id="cbPanel" role="dialog" aria-modal="false" aria-label="Esha Ma'am Helpdesk chat">
+  <div class="cb-head">
+    <span class="cb-ava" aria-hidden="true">E</span>
+    <span class="cb-meta"><b>Esha Ma'am · Helpdesk</b><small>Quick answers · or call 79923 03328</small></span>
+    <button class="cb-x" id="cbClose" aria-label="Close chat">✕</button>
+  </div>
+  <div class="cb-body" id="cbBody" aria-live="polite"></div>
+  <div class="cb-chips" id="cbChips"></div>
+  <div class="cb-input">
+    <input type="text" id="cbText" placeholder="Type your question…" autocomplete="off" aria-label="Type your question">
+    <button class="cb-send" id="cbSend" aria-label="Send message">➤</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  const canvas = document.getElementById('stage');
+  if(!window.THREE || !canvas) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+  camera.position.set(0, 0.4, 9);
+
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // ----- lights -----
+  scene.add(new THREE.AmbientLight(0xffffff, 0.75));
+  const sun = new THREE.DirectionalLight(0xfff3d6, 0.9);
+  sun.position.set(4, 6, 5);
+  scene.add(sun);
+  const fill = new THREE.DirectionalLight(0xbcd4ff, 0.35);
+  fill.position.set(-5, -2, 3);
+  scene.add(fill);
+
+  const group = new THREE.Group();
+  scene.add(group);
+
+  // ----- letter texture for ABC blocks -----
+  function letterTexture(letter, bg, fg){
+    const c = document.createElement('canvas'); c.width = c.height = 256;
+    const x = c.getContext('2d');
+    x.fillStyle = bg; x.fillRect(0,0,256,256);
+    x.strokeStyle = 'rgba(255,255,255,.85)'; x.lineWidth = 14;
+    x.strokeRect(18,18,220,220);
+    x.fillStyle = fg;
+    x.font = '800 150px "Baloo 2", Arial';
+    x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillText(letter, 128, 140);
+    const t = new THREE.CanvasTexture(c);
+    return t;
+  }
+  function block(letter, bg, fg, size){
+    const mats = [];
+    for(let i=0;i<6;i++) mats.push(new THREE.MeshStandardMaterial({map: letterTexture(letter, bg, fg), roughness:.6}));
+    return new THREE.Mesh(new THREE.BoxGeometry(size,size,size), mats);
+  }
+
+  // ----- a simple book: cover + pages -----
+  function book(coverColor, w,h,d){
+    const g = new THREE.Group();
+    const cover = new THREE.Mesh(
+      new THREE.BoxGeometry(w, h, d),
+      new THREE.MeshStandardMaterial({color: coverColor, roughness:.55})
+    );
+    const pages = new THREE.Mesh(
+      new THREE.BoxGeometry(w*0.94, h*0.9, d*0.7),
+      new THREE.MeshStandardMaterial({color: 0xfffaf0, roughness:.9})
+    );
+    pages.position.x = w*0.04;
+    g.add(cover); g.add(pages);
+    return g;
+  }
+
+  // ----- pencil: body + tip + eraser -----
+  function pencil(){
+    const g = new THREE.Group();
+    const body = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.13, 0.13, 2.2, 6),
+      new THREE.MeshStandardMaterial({color: 0xf7b32b, roughness:.5})
+    );
+    const tip = new THREE.Mesh(
+      new THREE.ConeGeometry(0.13, 0.4, 6),
+      new THREE.MeshStandardMaterial({color: 0xe8c39e, roughness:.8})
+    );
+    tip.position.y = -1.3;
+    tip.rotation.x = Math.PI;
+    const lead = new THREE.Mesh(
+      new THREE.ConeGeometry(0.05, 0.16, 6),
+      new THREE.MeshStandardMaterial({color: 0x333333})
+    );
+    lead.position.y = -1.46; lead.rotation.x = Math.PI;
+    const eraser = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.13, 0.13, 0.22, 12),
+      new THREE.MeshStandardMaterial({color: 0xe4572e, roughness:.7})
+    );
+    eraser.position.y = 1.21;
+    g.add(body, tip, lead, eraser);
+    return g;
+  }
+
+  // ----- assemble floating classroom -----
+  const items = [];
+  function float(obj, x,y,z, speed, amp, spin){
+    obj.position.set(x,y,z);
+    obj.userData = {baseY:y, speed, amp, spin, phase: Math.random()*Math.PI*2};
+    group.add(obj); items.push(obj);
+  }
+
+  float(block('A', '#e4572e', '#ffffff', 1.0), -2.4,  1.3, 0, .8, .25, .004);
+  float(block('B', '#2a9d8f', '#ffffff', 0.85), -1.2, -1.5, .4, 1.1, .22, -.005);
+  float(block('C', '#1d3461', '#f7b32b', 0.9),  2.5,  1.6, -.4, .9, .28, .0045);
+
+  const bookStack = new THREE.Group();
+  const b1 = book(0xe4572e, 2.0, 0.28, 1.5);
+  const b2 = book(0x2a9d8f, 1.8, 0.26, 1.35); b2.position.y = 0.28; b2.rotation.y = 0.25;
+  const b3 = book(0x1d3461, 1.6, 0.24, 1.2);  b3.position.y = 0.54; b3.rotation.y = -0.2;
+  bookStack.add(b1,b2,b3);
+  float(bookStack, 0.2, -0.4, 0, .7, .3, .003);
+
+  const pen = pencil();
+  pen.rotation.z = 0.6;
+  float(pen, 2.2, -1.4, .5, 1.2, .3, 0);
+  pen.userData.spin = 0; pen.userData.wobble = true;
+
+  // tiny stars / sparkles
+  const starGeo = new THREE.OctahedronGeometry(0.12);
+  const starMat = new THREE.MeshStandardMaterial({color: 0xf7b32b, emissive: 0xf7b32b, emissiveIntensity:.4});
+  [[-3.2,-0.2,-1],[3.3,0.2,-1],[-0.8,2.2,-1.5],[1.5,2.4,-1],[ -2.2,-2.2,-.5]].forEach(p=>{
+    const s = new THREE.Mesh(starGeo, starMat);
+    float(s, p[0],p[1],p[2], 1.5+Math.random(), .18, .01);
+  });
+
+  // ----- drag to rotate + idle spin -----
+  let targetRotY = 0, targetRotX = 0, dragging = false, px = 0, py = 0;
+  function down(e){ dragging = true; px = (e.touches?e.touches[0].clientX:e.clientX); py = (e.touches?e.touches[0].clientY:e.clientY); canvas.style.cursor='grabbing'; }
+  function move(e){
+    if(!dragging) return;
+    const cx = (e.touches?e.touches[0].clientX:e.clientX);
+    const cy = (e.touches?e.touches[0].clientY:e.clientY);
+    targetRotY += (cx - px) * 0.006;
+    targetRotX += (cy - py) * 0.004;
+    targetRotX = Math.max(-0.5, Math.min(0.5, targetRotX));
+    px = cx; py = cy;
+  }
+  function up(){ dragging = false; canvas.style.cursor='grab'; }
+  canvas.addEventListener('mousedown', down);
+  window.addEventListener('mousemove', move);
+  window.addEventListener('mouseup', up);
+  canvas.addEventListener('touchstart', down, {passive:true});
+  canvas.addEventListener('touchmove', move, {passive:true});
+  canvas.addEventListener('touchend', up);
+
+  function resize(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if(canvas.width !== w || canvas.height !== h){
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+    }
+  }
+
+  let t = 0;
+  function tick(){
+    resize();
+    t += 0.016;
+    if(!dragging && !reduceMotion) targetRotY += 0.0016; // gentle idle spin
+    group.rotation.y += (targetRotY - group.rotation.y) * 0.08;
+    group.rotation.x += (targetRotX - group.rotation.x) * 0.08;
+
+    if(!reduceMotion){
+      items.forEach(o=>{
+        const u = o.userData;
+        o.position.y = u.baseY + Math.sin(t * u.speed + u.phase) * u.amp;
+        if(u.spin){ o.rotation.x += u.spin; o.rotation.y += u.spin * 1.3; }
+        if(u.wobble){ o.rotation.z = 0.6 + Math.sin(t*1.4 + u.phase) * 0.15; }
+      });
+    }
+    renderer.render(scene, camera);
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+// enquiry form → WhatsApp
+document.getElementById('sendEnquiry').addEventListener('click', ()=>{
+  const name  = document.getElementById('stuName').value.trim();
+  const cls   = document.getElementById('stuClass').value;
+  const time  = document.getElementById('stuTime').value;
+  const phone = document.getElementById('stuPhone').value.replace(/\D/g,'');
+  const addr  = document.getElementById('stuAddr').value.trim();
+
+  let ok = true;
+  function mark(id, valid){
+    document.getElementById(id).classList.toggle('invalid', !valid);
+    if(!valid) ok = false;
+  }
+  mark('f-name',  name.length > 1);
+  mark('f-class', cls !== '');
+  mark('f-time',  time !== '');
+  mark('f-phone', phone.length === 10);
+  mark('f-addr',  addr.length > 3);
+  if(!ok) return;
+
+  const msg =
+    'Hello Esha Ma\'am, I want to enquire about tuition.\n\n' +
+    '👦 Student: ' + name + '\n' +
+    '🏫 Class: ' + cls + '\n' +
+    '🕒 Comfortable timing: ' + time + '\n' +
+    '📞 Phone: ' + phone + '\n' +
+    '📍 Address: ' + addr;
+
+  window.open('https://wa.me/917992303328?text=' + encodeURIComponent(msg), '_blank');
+});
+
+// smooth-scroll all #section links via JS (avoids sandbox "external link" popup)
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth'});
+    }
+  });
+});
+
+// mobile menu
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', ()=>{
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', open);
+  menuBtn.textContent = open ? '✕ Close' : '☰ Menu';
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+  navLinks.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.textContent = '☰ Menu';
+}));
+
+// scroll-in reveals
+const obs = new IntersectionObserver(es=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); obs.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.rise').forEach(el=>obs.observe(el));
+</script>
+
+<!-- ===== chat helper logic (self-contained, no backend / no API key) ===== -->
+<script>
+(function(){
+  var PHONE = '+917992303328', WA = '917992303328';
+  var launch = document.getElementById('cbLaunch'),
+      panel  = document.getElementById('cbPanel'),
+      closeB = document.getElementById('cbClose'),
+      body   = document.getElementById('cbBody'),
+      chips  = document.getElementById('cbChips'),
+      input  = document.getElementById('cbText'),
+      send   = document.getElementById('cbSend');
+  if(!launch || !panel) return;
+
+  var started = false;
+
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  // ----- reusable action buttons -----
+  function waBtn(label, text){
+    var t = text ? '?text=' + encodeURIComponent(text) : '';
+    return '<a class="cb-act" href="https://wa.me/' + WA + t + '" target="_blank" rel="noopener">💬 ' + label + '</a>';
+  }
+  var callBtn = '<a class="cb-act cb-go" href="tel:' + PHONE + '">📞 Call now</a>';
+  var formBtn = '<button class="cb-act cb-go" data-go="enquiry">📝 Open enquiry form</button>';
+  var mapBtn  = '<a class="cb-act" href="https://www.google.com/maps/search/?api=1&query=Hinjewadi+Phase+3+TCS+Circle+Pune" target="_blank" rel="noopener">📍 Directions</a>';
+
+  function bubble(html, acts){
+    var a = (acts && acts.length) ? '<div class="cb-acts">' + acts.join('') + '</div>' : '';
+    return '<div class="cb-msg"><span class="cb-mava" aria-hidden="true">✏️</span>' +
+           '<div class="cb-bubble">' + html + a + '</div></div>';
+  }
+
+  function scroll(){ body.scrollTop = body.scrollHeight; }
+
+  function addBot(html, acts){
+    body.insertAdjacentHTML('beforeend', bubble(html, acts)); scroll();
+  }
+  function addUser(text){
+    body.insertAdjacentHTML('beforeend',
+      '<div class="cb-msg cb-me"><div class="cb-bubble">' + esc(text) + '</div></div>'); scroll();
+  }
+  function typing(){
+    var d = document.createElement('div');
+    d.className = 'cb-msg';
+    d.innerHTML = '<span class="cb-mava" aria-hidden="true">✏️</span><div class="cb-bubble"><span class="cb-typing"><i></i><i></i><i></i></span></div>';
+    body.appendChild(d); scroll(); return d;
+  }
+
+  // ----- knowledge base -----
+  var R = {
+    greet: function(){ return { html:'Namaste! 🙏 Main Esha Ma\'am ki tuition helpdesk hoon. Subjects, classes, timing, fees ya location — kuch bhi poochein, ya neeche se ek option chunein.' }; },
+    subjects: function(){ return { html:'Esha Ma\'am <b>6 subjects</b> padhati hain (Nursery–Class 7):<br>📖 English · 🪔 Hindi · ➗ Maths · 🔬 Science · 🏛️ History · 🗺️ Geography.<br>Daily homework help bhi milti hai.' }; },
+    classes: function(){ return { html:'Classes: <b>Nursery, LKG, UKG</b> aur <b>Class 1 se Class 7</b> tak. Har class ko age ke hisaab se attention — chhoton ke liye playful learning, badon ke liye exam focus.' }; },
+    timings: function(){ return { html:'🕒 Timings: <b>3:00 PM – 8:00 PM</b>, <b>Monday se Saturday</b>. Aap apna comfortable 1-hour slot choose kar sakte hain.' }; },
+    fees: function(){ return { html:'Fees class aur batch ke hisaab se hoti hai, isliye Esha Ma\'am personally call/WhatsApp pe batati hain — aur pehli interaction <b>free</b> hai. Abhi pooch lein 👇', acts:[callBtn, waBtn('WhatsApp', 'Hello Esha Ma\'am, fees ke baare mein jaanna tha.')] }; },
+    location: function(){ return { html:'📍 <b>Hinjewadi Phase 3</b>, near TCS Circle, opposite Public Bazar — Flat 104, Livmo (Rama Group), Pune 411057. Aas-paas ki societies se walking distance.', acts:[mapBtn, callBtn] }; },
+    join: function(){ return { html:'Admission easy hai 🎒 — neeche wala <b>enquiry form</b> bharein (WhatsApp pe details ready ho jayengi), ya seedha call/WhatsApp karein. Pehli interaction free hai!', acts:[formBtn, callBtn, waBtn('WhatsApp', 'Hello Esha Ma\'am, I want to enquire about tuition for my child.')] }; },
+    contact: function(){ return { html:'Aap Esha Ma\'am se 3 PM – 8 PM ke beech baat kar sakte hain:<br>📞 <b>+91 79923 03328</b>', acts:[callBtn, waBtn('WhatsApp', '')] }; },
+    features: function(){ return { html:'Kyun parents bharosa karte hain: <b>small batches</b>, daily homework support, regular tests, aur parents ko progress ke updates — taaki har bachche ko personal attention mile.', acts:[formBtn] }; },
+    thanks: function(){ return { html:'Bilkul! 😊 Aur kuch poochna ho toh main yahin hoon. Esha Ma\'am se baat ke liye Call ya WhatsApp dabayein.', acts:[callBtn, waBtn('WhatsApp', '')] }; },
+    fallback: function(){ return { html:'Iska pakka jawab mujhe nahi pata 🤔 — best hoga aap Esha Ma\'am se seedha baat karein. Ya in mein se kuch poochein:', acts:[callBtn, waBtn('WhatsApp', '')] }; }
+  };
+
+  // ----- intents (keyword based) -----
+  var INTENTS = [
+    { r:'thanks',   k:['thank','thanks','shukriya','dhanyavad','dhanyawad'] },
+    { r:'greet',    k:['hi','hii','hey','hello','helo','namaste','namaskar','heya'] },
+    { r:'subjects', k:['subject','subjects','vishay','english','hindi','maths','math','science','history','geography','padhati','padhate','teach'] },
+    { r:'classes',  k:['class','classes','nursery','lkg','ukg','grade','standard','std'] },
+    { r:'timings',  k:['time','timing','timings','hours','schedule','kab','baje','days','batch'] },
+    { r:'fees',     k:['fee','fees','charge','charges','cost','price','paisa','paise','rupee','monthly','kitna','kitne'] },
+    { r:'location', k:['where','location','address','kaha','kahan','reach','direction','directions','map','area','jagah','near'] },
+    { r:'join',     k:['join','admission','admissions','enquiry','enquire','enroll','enrol','register','admit','daakhila','seat','seats','book'] },
+    { r:'features', k:['homework','test','tests','attention','update','updates','progress','demo','trial','free','why'] },
+    { r:'contact',  k:['contact','phone','number','call','whatsapp','mobile','baat','talk'] }
+  ];
+
+  function detect(msg){
+    var norm = (' ' + msg.toLowerCase().replace(/[^a-z0-9\u0900-\u097F\s]/g,' ').replace(/\s+/g,' ') + ' ');
+    var words = norm.trim().split(' ');
+    function has(k){
+      if(words.indexOf(k) !== -1) return true;            // whole-word
+      return k.length >= 4 && norm.indexOf(k) !== -1;      // safe substring for longer terms
+    }
+    for(var i=0;i<INTENTS.length;i++){
+      for(var j=0;j<INTENTS[i].k.length;j++){
+        if(has(INTENTS[i].k[j])) return INTENTS[i].r;
+      }
+    }
+    return 'fallback';
+  }
+
+  function answer(msg){
+    addUser(msg);
+    var t = typing();
+    setTimeout(function(){
+      t.remove();
+      var res = R[detect(msg)]();
+      addBot(res.html, res.acts);
+    }, 480);
+  }
+
+  // ----- quick reply chips -----
+  var CHIPS = [
+    ['Subjects','what subjects do you teach'],
+    ['Classes','which classes'],
+    ['Timings','what are the timings'],
+    ['Fees','fees'],
+    ['Location','where are you located'],
+    ['How to join','how to join']
+  ];
+  CHIPS.forEach(function(c){
+    var b = document.createElement('button');
+    b.className = 'cb-chip'; b.type = 'button'; b.textContent = c[0];
+    b.addEventListener('click', function(){ answer(c[1]); });
+    chips.appendChild(b);
+  });
+
+  // ----- open / close -----
+  function open(){
+    panel.classList.add('cb-open');
+    launch.classList.add('cb-hide');
+    launch.setAttribute('aria-expanded','true');
+    if(!started){
+      started = true;
+      var g = R.greet();
+      addBot(g.html);
+    }
+    setTimeout(function(){ input.focus(); }, 50);
+  }
+  function close(){
+    panel.classList.remove('cb-open');
+    launch.classList.remove('cb-hide');
+    launch.setAttribute('aria-expanded','false');
+    launch.focus();
+  }
+  launch.addEventListener('click', open);
+  closeB.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && panel.classList.contains('cb-open')) close();
+  });
+
+  // ----- send typed message -----
+  function submit(){
+    var v = input.value.trim();
+    if(!v) return;
+    input.value = '';
+    answer(v);
+  }
+  send.addEventListener('click', submit);
+  input.addEventListener('keydown', function(e){ if(e.key === 'Enter') submit(); });
+
+  // ----- in-chat action buttons (e.g. open enquiry form) -----
+  body.addEventListener('click', function(e){
+    var go = e.target.closest('[data-go]');
+    if(go && go.getAttribute('data-go') === 'enquiry'){
+      close();
+      var form = document.getElementById('enquiry');
+      if(form) form.scrollIntoView({behavior:'smooth'});
+    }
+  });
+
+  // ----- one-time gentle attention nudge -----
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    setTimeout(function(){
+      if(!panel.classList.contains('cb-open')){
+        launch.classList.add('cb-attn');
+        setTimeout(function(){ launch.classList.remove('cb-attn'); }, 2700);
+      }
+    }, 3500);
+  }
+})();
+</script>
+</body>
+</html>
